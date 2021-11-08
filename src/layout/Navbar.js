@@ -15,7 +15,7 @@ const Navbar = () => {
     <nav className="green">
       <div className="nav-wrapper">
         <Link to="/" className="brand-logo">
-          Pokemon Apps
+          PokeApps
         </Link>
         <Link to="#" data-target="mobile-demo" className="sidenav-trigger">
           <i className="material-icons">menu</i>

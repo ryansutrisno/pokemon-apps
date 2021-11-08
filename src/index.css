@@ -21,7 +21,7 @@ code {
 .card {
   padding: 10px;
   margin-bottom: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0px 6px 6px rgba(188, 200, 231, 0.2);
 }
 
@@ -40,9 +40,4 @@ code {
 
 .sidenav:hover li {
   background: #4baf4f;
-}
-
-.success {
-  background: #4baf4f;
-  color: #ffffff;
 }
