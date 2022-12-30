@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
-axios.defaults.baseURL = 'https://pokeapi.co/api/v2/'
+axios.defaults.baseURL = 'https://pokeapi.co/api/v2/';
 
 export const useFetch = ({ url, method, body = null }) => {
   const [response, setResponse] = useState(undefined)
@@ -21,6 +21,7 @@ export const useFetch = ({ url, method, body = null }) => {
           method,
           data: body,
           cancelToken: source.token,
+          withCredentials: false
         })
         // succes getting response
         setResponse(result.data)

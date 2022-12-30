@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 import 'materialize-css/dist/css/materialize.min.css'
 import M from 'materialize-css'
 import { DetailContext } from '../context'
+import Search from '../components/Search'
 
 const Navbar = () => {
   const { mypokemons } = useContext(DetailContext)
@@ -25,6 +26,8 @@ const Navbar = () => {
             <NavLink to="/mypokemon">My Pokemon {totalPokemon}</NavLink>
           </li>
         </ul>
+        </div>
+        <div className="nav-wrapper">
         <ul className="sidenav" id="mobile-demo">
           <li>
             <NavLink to="/mypokemon">My Pokemon {totalPokemon}</NavLink>

@@ -6,7 +6,7 @@ const useIndex = () => {
   const [pokemons, setPokemons] = useState([])
 
   const { response, error, loading } = useFetch({
-    url: '/pokemon?limit=100',
+    url: '/pokemon?limit=151',
     method: 'GET',
     data: {},
   })

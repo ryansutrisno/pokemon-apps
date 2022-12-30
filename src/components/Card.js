@@ -25,7 +25,7 @@ function Card({ slug, pokemon }) {
   }, [error])
 
   return (
-    <div className="card white">
+    <div style={{borderRadius: '10px'}} className="card white">
       <h5 className="black-text">{_.startCase(pokemon)}</h5>
       <div className="card-image">
         {loading ? (
@@ -35,8 +35,8 @@ function Card({ slug, pokemon }) {
             className="detail-image"
             src={image}
             alt={pokemon}
-            width="300px"
-            height="300px"
+            width="150px"
+            height="150px"
           />
         )}
       </div>

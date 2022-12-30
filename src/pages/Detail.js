@@ -12,14 +12,14 @@ function Detail() {
     useDetail()
 
   const handleCatch = () => {
-    const favObject = {}
-    favObject.id = id
-    favObject.image = image
-    favObject.name = pokemon
-    const newFav = [...mypokemons, favObject]
-    setMypokemons(newFav)
-    localStorage.setItem('mypokemons', JSON.stringify(newFav))
-    enqueueSnackbar('Pokemon berhasil ditangkap!', { variant: 'success' })
+    if(mypokemons?.some((val)=>val?.id === id)){
+      enqueueSnackbar('Pokemon sudah dimiliki!', { variant: 'error' })
+    }else {
+      const newFav = [...mypokemons, {id, image, name: pokemon}]
+      setMypokemons(newFav)
+      localStorage.setItem('mypokemons', JSON.stringify(newFav))
+      enqueueSnackbar('Pokemon berhasil ditangkap!', { variant: 'success' })
+    }
   }
 
   return (
